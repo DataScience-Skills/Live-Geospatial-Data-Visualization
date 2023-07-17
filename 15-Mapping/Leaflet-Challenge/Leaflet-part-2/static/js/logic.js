@@ -7,23 +7,6 @@
     visualize USGS data that will allow them to better educate the public and other government organizations (and hopefully secure more funding)
     on issues facing our planet. */
 
-// Before You Begin
-    // Create a new repository for this project called leaflet-challenge. Do not add this Challenge to an existing repository.
-    // Clone the new repository to your computer.
-    /* Inside your local git repository, create a directory for the Leaflet challenge. 
-    Use the folder names to correspond to the challenges: Leaflet-Part-1 and Leaflet-Part-2.*/
-    // This Challenge uses both HTML and JavaScript, so be sure to add all the necessary files. These will be the main files to run for analysis.
-    // Push the above changes to GitHub.
-
-// Files
-    // Download the following files to help you get started:
-    // Module 15 Challenge filesLinks to an external site.
-
-// Instructions
-    // The instructions for this activity are broken into two parts:
-    // Part 1: Create the Earthquake Visualization
-    // Part 2: Gather and Plot More Data (Optional with no extra points earning)
-
 // Part 1: Create the Earthquake Visualization
     // 2-BasicMap
         // Your first task is to visualize an earthquake dataset. Complete the following steps:
@@ -71,3 +54,89 @@
     // Data points colors change with depth level (10 points)
     // Each point has a tooltip with the Magnitude, the location and depth (10 points)
     // All data points load in the correct locations (10 points)
+// Global Variables
+let myMap;
+
+// Function to create the map
+function createMap(earthquakes, tectonicPlates) {
+  // Create a tile layer
+  let streetMap = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: "&copy; OpenStreetMap contributors"
+  });
+
+  // Create the map and set its initial view
+  myMap = L.map("map", {
+    center: [37.09, -95.71],
+    zoom: 5,
+    layers: [streetMap, earthquakes], // Show earthquakes layer by default
+  });
+
+  // Add the tile layer and earthquakes layer to the map
+  let baseMaps = {
+    "Street Map": streetMap
+  };
+
+  let overlayMaps = {
+    "Earthquakes": earthquakes
+  };
+
+  // Fetch tectonic plates data using D3
+  let tectonicPlatesUrl = "path/to/PB2002_plates.json";
+  d3.json(tectonicPlatesUrl).then(function (tectonicData) {
+    // Function to create the tectonic plates layer
+    function createTectonicPlatesLayer(tectonicData) {
+      // ... (code similar to createFeatures function but tailored for tectonic plates)
+    }
+
+    // Call the createTectonicPlatesLayer function with the retrieved data
+    createTectonicPlatesLayer(tectonicData);
+
+    // Add tectonic plates layer to overlayMaps
+    overlayMaps["Tectonic Plates"] = tectonicPlates;
+
+    // Add layer control to the map
+    L.control.layers(baseMaps, overlayMaps, { collapsed: false }).addTo(myMap);
+
+    // Create a legend
+    let legend = L.control({ position: "bottomright" });
+
+    legend.onAdd = function () {
+      let div = L.DomUtil.create("div", "info legend");
+      let labels = ["<strong>Depth</strong>"];
+      let categories = ["< 50", "50-100", "> 100"];
+      let colors = ["#FFFF00", "#FFA500", "#FF0000"];
+
+      for (let i = 0; i < categories.length; i++) {
+        div.innerHTML +=
+          labels.push(
+            '<i style="background:' + colors[i] + '"></i> ' +
+            categories[i]
+          );
+      }
+      div.innerHTML = labels.join("<br>");
+      return div;
+    };
+
+    legend.addTo(myMap);
+  });
+
+}
+
+// Function to create the earthquake features
+function createFeatures(earthquakeData) {
+  // ... (existing code)
+}
+
+// Fetch earthquake data using D3
+let queryUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
+d3.json(queryUrl).then(function (data) {
+  // Call the createFeatures function with the retrieved data
+  createFeatures(data);
+
+  // Call the createMap function
+  // This should be done after both earthquake and tectonic plates data are loaded
+  createMap(earthquakes, tectonicPlates);
+});
+
+// Function to add more base maps (optional)
+// ...
