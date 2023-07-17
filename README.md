@@ -29,6 +29,9 @@ Throughout this project, the following tools were utilized:
 
 ## Results
 
+![Earthquakes](15-Mapping/Leaflet-Challenge/Images/Earthquakes.png)
+![Earthquakes and Tectonic Plates](15-Mapping/Leaflet-Challenge/Images/Earthquakes_Tectonic_Plates.png)
+
 ### Part 1: Create the Earthquake Visualization
 
 These steps were used to visualize the earthquake dataset from the USGS:
