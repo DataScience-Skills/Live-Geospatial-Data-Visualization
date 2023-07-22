@@ -57,6 +57,3 @@ The steps required to add tectonic plates data on the map alongside the earthqua
 The earthquake data from the USGS has been successfully visualized using Leaflet. The interactive map displays earthquake events with markers sized according to magnitude and colored based on depth. Additionally, popups offer more information about each earthquake, and a legend provides context for the map data. In addition to the earthquakes data, tectonic plates data is plotted on the map alongside the earthquakes and a layer controls is offered to enable users to explore both datasets independently.
 
 Thia visualization will assist the USGS in better educating the public and government organizations about the critical issues facing our planet. Tools like this one, we hope, contribute to greater awareness, understanding, and support for initiatives related to natural hazards and environmental conservation.
-
-LICENSE
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
