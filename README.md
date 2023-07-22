@@ -15,7 +15,7 @@ The primary goal of this project is to develop a web-based visualization tool us
 3. Enable popups to display additional information about each earthquake when a marker is clicked.
 4. Create a legend to provide context for the map data, allowing users to understand the earthquake magnitude and depth variations.
 
-Additionally, a second dataset is plotted on the map to illustrate the relationship between tectonic plates and seismic activity. This dataset will be fetched from https://githubusercontent.com/fraxen/tectonicplates.
+Additionally, a second dataset is plotted on the map to illustrate the relationship between tectonic plates and seismic activity. This dataset will be fetched from https://githubusercontent.com/fraxen/tectonicplates using D3.js, a JavaScript library for data manipulation, which enables API calls to fetch and process JSON data.
 
 ## Tools and Skills Used
 
@@ -25,7 +25,7 @@ Throughout this project, the following tools were utilized:
 2. [HTML](https://www.w3schools.com/html/): Used to structure the webpage and create the necessary elements for the map and data visualization.
 3. [CSS](https://www.w3schools.com/css/): Styled the webpage and map elements to provide an attractive and user-friendly interface.
 4. [JavaScript](https://www.w3schools.com/js/): Utilized to fetch earthquake and tectonic plates data, manipulate the data, and create the map with interactive features.
-5. [D3.js](https://d3js.org/): A JavaScript library for data manipulation, which enabled us to fetch and process JSON data.
+5. [D3.js](https://d3js.org/): A JavaScript library for data manipulation, which enabled us to fetch and process JSON data through API calls.
 
 ## Results
 
