@@ -54,5 +54,5 @@ The earthquake data from the USGS has been successfully visualized using Leaflet
 
 Thia visualization will assist the USGS in better educating the public and government organizations about the critical issues facing our planet. Tools like this one, we hope, contribute to greater awareness, understanding, and support for initiatives related to natural hazards and environmental conservation.
 
-![Earthquakes](https://github.com/robert-z-lehr/Geospatial-Earthquake-Visualization/blob/main/images/.Earthquakes.png)
-![Earthquakes and Tectonic Plates](https://github.com/robert-z-lehr/Geospatial-Earthquake-Visualization/blob/main/images/.Earthquakes_Tectonic_Plates.png)
+![Earthquakes](https://github.com/robert-z-lehr/Geospatial-Earthquake-Visualization/blob/main/images/Earthquakes.png)
+![Earthquakes and Tectonic Plates](https://github.com/robert-z-lehr/Geospatial-Earthquake-Visualization/blob/main/images/Earthquakes_Tectonic_Plates.png)
