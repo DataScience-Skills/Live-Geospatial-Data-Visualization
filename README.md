@@ -28,11 +28,6 @@ Throughout this project, the following tools were utilized:
 4. [JavaScript](https://www.w3schools.com/js/): Utilized to fetch earthquake and tectonic plates data, manipulate the data, and create the map with interactive features.
 5. [D3.js](https://d3js.org/): A JavaScript library for data manipulation, which enabled us to fetch and process JSON data through API calls.
 
-## Results
-
-![Earthquakes](15-Mapping/Leaflet-Challenge/Images/Earthquakes.png)
-![Earthquakes and Tectonic Plates](15-Mapping/Leaflet-Challenge/Images/Earthquakes_Tectonic_Plates.png)
-
 ### Part 1: Create the Earthquake Visualization
 
 These steps were used to visualize the earthquake dataset from the USGS:
@@ -58,3 +53,6 @@ The steps required to add tectonic plates data on the map alongside the earthqua
 The earthquake data from the USGS has been successfully visualized using Leaflet. The interactive map displays earthquake events with markers sized according to magnitude and colored based on depth. Additionally, popups offer more information about each earthquake, and a legend provides context for the map data. In addition to the earthquakes data, tectonic plates data is plotted on the map alongside the earthquakes and a layer controls is offered to enable users to explore both datasets independently.
 
 Thia visualization will assist the USGS in better educating the public and government organizations about the critical issues facing our planet. Tools like this one, we hope, contribute to greater awareness, understanding, and support for initiatives related to natural hazards and environmental conservation.
+
+![Earthquakes](https://github.com/robert-z-lehr/Geospatial-Earthquake-Visualization/blob/main/images/.Earthquakes.png)
+![Earthquakes and Tectonic Plates](https://github.com/robert-z-lehr/Geospatial-Earthquake-Visualization/blob/main/images/.Earthquakes_Tectonic_Plates.png)
