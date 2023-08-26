@@ -42,7 +42,7 @@ These steps were used to visualize the earthquake dataset from the USGS:
 
 The steps required to add tectonic plates data on the map alongside the earthquake data include:
 
-1. Fetch tectonic plates data from this [GeoJSON URL](https://github.com/fraxen/tectonicplates/tree/master/GeoJSON) using D3.js.
+1. Fetch tectonic plates data from this [GeoJSON URL](https://github.com/fraxen/tectonicplates) using D3.js.
 2. Plot the tectonic plates dataset on the map in addition to the earthquakes.
 3. Add other base maps as choices to provide users with different visualizations.
 4. Organize each dataset into separate overlays that can be turned on and off independently.
