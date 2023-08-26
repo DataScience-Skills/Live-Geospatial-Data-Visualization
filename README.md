@@ -1,6 +1,7 @@
 
 # Earthquake Visualization with Leaflet
 
+![Eartquakes-gif](https://github.com/robert-z-lehr/Geospatial-Earthquake-Visualization/blob/main/images/6-Time_Keeps_On_Ticking.gif)
 
 ## Background
 
